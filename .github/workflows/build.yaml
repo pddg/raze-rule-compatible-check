@@ -19,6 +19,6 @@ jobs:
         with:
           path: "~/.cache/bazel"
           key: bazel
-      - run: bazel run @cargo_raze//:raze -- --manifest-path=$(realpath /Cargo.toml)
+      - run: bazel run @cargo_raze//:raze -- --manifest-path=$PWD/Cargo.toml
       - run: bazel run //:sample
 
